@@ -22,3 +22,15 @@ hello.js文件中引入以下代码，并进行编译
 ``` 
 require('style-loader!css-loader!./style.css') 
 ```
+
+### 设罝dev、test、build命令
+
+修改```package.json```文件
+```
+"script": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "webpack-dev-server --open --config webpack.dev.js",
+    "build": "webpack --config webpack.prod.js"
+}
+```
+命令行输入： ```npm run build```  对应编译```webpack.build.js```文件
